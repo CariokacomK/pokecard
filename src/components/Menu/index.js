@@ -1,22 +1,30 @@
-import './Menu.css'
 import { Button } from "antd";
+import './Menu.css';
+import { useState } from "react";
+import Regras from './../Regras/index';
 
 const Menu = () => {
+    const [openModal, setOpenModal] = useState(false)
+
     return (
-        <section>
-            <div className='menu'>
-                <h1>Bem vindo ao <span>PokeCard</span></h1>
-                <h2>Selecione uma opção</h2>
-                <div className='options'>
-                    <Button>
-                        Jogar
-                    </Button>
-                    <Button>
-                        Regras
-                    </Button>
+        <>
+            <section className='menu-content'>
+                <div className='menu'>
+                    <h1>Bem vindo ao <span>PokeCard</span></h1>
+                    <h2>Selecione uma opção</h2>
+                    <div className='options'>
+                        <Button>
+                            Jogar
+                        </Button>
+                        <Button onClick={() => setOpenModal(true)}>
+                            Regras
+                        </Button>
+                    </div>
                 </div>
-            </div>
-        </section>
+                <Regras isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}/>
+            </section>
+            
+        </>
     )
 }
 
