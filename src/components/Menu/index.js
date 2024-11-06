@@ -7,7 +7,6 @@ const Menu = () => {
     const [openModal, setOpenModal] = useState(false)
 
     return (
-        <>
             <section className='menu-content'>
                 <div className='menu'>
                     <h1>Bem vindo ao <span>PokeCard</span></h1>
@@ -23,8 +22,6 @@ const Menu = () => {
                 </div>
                 <Regras isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}/>
             </section>
-            
-        </>
     )
 }
 
