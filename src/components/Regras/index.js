@@ -1,13 +1,13 @@
 import { CloseOutlined } from '@ant-design/icons'
 import './Regras.css'
 
-const Regras = ({ isOpen, setModalOpen }) => {
+const Regras = ({ isOpen, closeModal }) => {
 
     return (
 
         isOpen && (<div className='content-rules'>
             <div className='content-close'>
-                <CloseOutlined style={{ cursor: 'pointer' }} onClick={setModalOpen} />
+                <CloseOutlined style={{ cursor: 'pointer' }} onClick={closeModal} />
             </div>
             <h1>Olá, Bem vindo ao PokeCard!</h1>
             <h2>Regras</h2>

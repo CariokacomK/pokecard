@@ -20,7 +20,7 @@ const Menu = () => {
                         </Button>
                     </div>
                 </div>
-                <Regras isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}/>
+                <Regras isOpen={openModal} closeModal={() => setOpenModal(!openModal)}/>
             </section>
     )
 }
