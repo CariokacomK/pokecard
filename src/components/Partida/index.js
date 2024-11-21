@@ -11,8 +11,12 @@ function Partida() {
     }
 
     function gerarPokemon() {
-        const playerRandomNumber = pokeRandom();
-        const npcRandomNumber = pokeRandom();
+        let playerRandomNumber
+        let npcRandomNumber
+        do{
+             playerRandomNumber = pokeRandom();
+             npcRandomNumber = pokeRandom();
+        }while (playerRandomNumber === npcRandomNumber)
 
         axios
             .all([
