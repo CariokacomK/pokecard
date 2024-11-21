@@ -1,8 +1,10 @@
-section {
+.menu-content {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: url(../../images/menu.jpg) no-repeat center center;
+    background-size: cover;
 
     .menu {
         display: flex;
